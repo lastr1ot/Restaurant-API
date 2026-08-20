@@ -57,8 +57,3 @@ GET /orders - Получить все заказы
 GET /orders/{id} - Получить заказ по ID
 
 PATCH /orders/{id}/status - Обновить статус заказа
-
-## Автор
-
-Роман Чичерин 
-GitHub: github.com/lastr1ot
