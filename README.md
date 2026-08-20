@@ -4,11 +4,11 @@ REST API для управления заказами в ресторане. Н�
 ## Стек технологий
 
  Python 3.11+
- FastAPI — асинхронный веб-фреймворк
- SQLAlchemy 2.0 — ORM для работы с базой данных
- Pydantic — валидация данных и типизация
- Asyncio — асинхронное программирование
- SQLite — база данных (в продакшене PostgreSQL)
+ FastAPI - асинхронный веб-фреймворк
+ SQLAlchemy 2.0 - ORM для работы с базой данных
+ Pydantic - валидация данных и типизация
+ Asyncio - асинхронное программирование
+ SQLite - база данных (в продакшене PostgreSQL)
 
 ## Функциональность
 
@@ -30,18 +30,18 @@ REST API для управления заказами в ресторане. Н�
 
 ## Структура проекта
 
-- main.py — FastAPI приложение и эндпоинты
-- models.py — Pydantic модели для валидации
-- database.py — SQLAlchemy ORM модели
-- requirements.txt — Зависимости проекта
-- README.md — Документация
+- main.py - FastAPI приложение и эндпоинты
+- models.py - Pydantic модели для валидации
+- database.py - SQLAlchemy ORM модели
+- requirements.txt - Зависимости проекта
+- README.md - Документация
 
 ## API Эндпоинты
 
-POST /orders — Создать новый заказ 
-GET /orders — Получить все заказы
-GET /orders/{id} — Получить заказ по ID 
-PATCH /orders/{id}/status — Обновить статус заказа
+POST /orders - Создать новый заказ 
+GET /orders - Получить все заказы
+GET /orders/{id} - Получить заказ по ID 
+PATCH /orders/{id}/status - Обновить статус заказа
 
 ## Автор
 
