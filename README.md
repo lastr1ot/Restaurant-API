@@ -130,7 +130,7 @@ Docker Compose
 
 ```bash
 
-docker-compose up --build -d
+docker compose up --build -d
 
 ```
 
@@ -285,7 +285,7 @@ pytest -v --cov=.
 
 ```bash
 
-docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
+docker compose -f docker compose.test.yml up --build --abort-on-container-exit
 
 ```
 
