@@ -136,11 +136,11 @@ docker-compose up --build -d
 
 
 
-\## API Endpoints
+API Endpoints
 
 
 
-\### Создание заказа
+Создание заказа
 
 ```bash
 
@@ -170,7 +170,7 @@ Content-Type: application/json
 
 
 
-\*\*Ответ:\*\*
+Ответ:
 
 ```json
 
@@ -198,7 +198,7 @@ Content-Type: application/json
 
 
 
-\### Получение списка заказов
+Получение списка заказов
 
 ```bash
 
@@ -210,7 +210,7 @@ GET /orders
 
 
 
-\### Обновление статуса
+Обновление статуса
 
 ```bash
 
@@ -220,7 +220,7 @@ PATCH /orders/1/status?new\_status=cooking
 
 
 
-\### Health Check
+Health Check
 
 ```bash
 
@@ -230,17 +230,17 @@ GET /health
 
 
 
-\## Архитектурные решения
+Архитектурные решения
 
 
 
-\### Почему Decimal вместо float?
+Почему Decimal вместо float?
 
 Для точных финансовых расчётов. Float даёт ошибки округления (0.1 + 0.2 ≠ 0.3), что недопустимо для денег.
 
 
 
-\### Почему JSON для items?
+Почему JSON для items?
 
 \- Гибкость: можно добавлять поля без миграций
 
@@ -250,29 +250,29 @@ GET /health
 
 
 
-\### Rate Limiting
+Rate Limiting
 
 Middleware ограничивает 10 запросов в минуту с одного IP. Реализовано через Redis (INCR + EXPIRE).
 
 
 
-\### Кэширование
+Кэширование
 
 Список заказов кэшируется в Redis на 60 секунд. Инвалидация при создании/обновлении заказа (DEL key).
 
 
 
-\### Очередь задач
+Очередь задач
 
 arq + Redis для асинхронной отправки уведомлений. Worker запускается отдельным процессом.
 
 
 
-\## Тестирование
+Тестирование
 
 
 
-\### Локально
+Локально
 
 ```bash
 
@@ -282,7 +282,7 @@ pytest -v --cov=.
 
 
 
-\### В Docker (изолированное окружение)
+В Docker 
 
 ```bash
 
@@ -292,7 +292,7 @@ docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
 
 
 
-\*\*Стратегия тестирования:\*\*
+Стратегия тестирования:
 
 \- Фикстуры с function-scope для изоляции БД
 
@@ -304,7 +304,7 @@ docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
 
 
 
-\## CI/CD
+CI/CD
 
 
 
@@ -322,7 +322,7 @@ GitHub Actions автоматически:
 
 
 
-\## Структура проекта
+Структура проекта
 
 
 
