@@ -152,17 +152,17 @@ Content-Type: application/json
 
 {
 
-&#x20; "table\_id": 5,
+"table\_id": 5,
 
-&#x20; "items": \[
+"items": \[
 
-&#x20;   {"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
+{"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
 
-&#x20;   {"name": "Cola", "quantity": 1, "price": 150.00}
+{"name": "Cola", "quantity": 1, "price": 150.00}
 
-&#x20; ],
+],
 
-&#x20; "total\_price": 1051.00
+"total\_price": 1051.00
 
 }
 
@@ -176,21 +176,21 @@ Content-Type: application/json
 
 {
 
-&#x20; "id": 1,
+"id": 1,
 
-&#x20; "table\_id": 5,
+"table\_id": 5,
 
-&#x20; "items": \[
+"items": \[
 
-&#x20;   {"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
+{"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
 
-&#x20;   {"name": "Cola", "quantity": 1, "price": 150.00}
+{"name": "Cola", "quantity": 1, "price": 150.00}
 
-&#x20; ],
+],
 
-&#x20; "total\_price": "1051.00",
+"total\_price": "1051.00",
 
-&#x20; "status": "new"
+"status": "new"
 
 }
 
@@ -246,7 +246,6 @@ GET /health
 
 \- Производительность: не нужны JOIN с таблицей OrderItem
 
-\- Для учебного проекта: проще и нагляднее
 
 
 
@@ -258,7 +257,7 @@ Middleware ограничивает 10 запросов в минуту с од�
 
 Кэширование
 
-Список заказов кэшируется в Redis на 60 секунд. Инвалидация при создании/обновлении заказа (DEL key).
+Список заказов кэшируется в Redis на 60 секунд. Инвалидация при создании или обновлении заказа (DEL key).
 
 
 
@@ -296,7 +295,7 @@ docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit
 
 \- Фикстуры с function-scope для изоляции БД
 
-\- FakeRedis и FakeQueue для мокирования внешних сервисов
+\- FakeRedis и FakeQueue для мока внешних сервисов
 
 \- Тесты middleware, бизнес-логики, кэширования
 
