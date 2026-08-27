@@ -152,9 +152,9 @@ Content-Type: application/json
 
 {
 
-"table\_id": 5,
+"table_id": 5,
 
-"items": \[
+"items": [
 
 {"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
 
@@ -162,7 +162,7 @@ Content-Type: application/json
 
 ],
 
-"total\_price": 1051.00
+"total_price": 1051.00
 
 }
 
@@ -178,9 +178,9 @@ Content-Type: application/json
 
 "id": 1,
 
-"table\_id": 5,
+"table_id": 5,
 
-"items": \[
+"items": [
 
 {"name": "Pizza Margherita", "quantity": 2, "price": 450.50},
 
@@ -188,7 +188,7 @@ Content-Type: application/json
 
 ],
 
-"total\_price": "1051.00",
+"total_price": "1051.00",
 
 "status": "new"
 
@@ -214,7 +214,7 @@ GET /orders
 
 ```bash
 
-PATCH /orders/1/status?new\_status=cooking
+PATCH /orders/1/status?new_status=cooking
 
 ```
 
