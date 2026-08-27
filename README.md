@@ -1,4 +1,4 @@
-\# FastAPI Orders Service
+FastAPI Orders Service
 
 
 
@@ -6,7 +6,7 @@ REST API сервис для управления заказами в ресто
 
 
 
-\## 📋 Описание
+Описание
 
 
 
